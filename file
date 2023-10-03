@@ -1,0 +1,42 @@
+Table: ART_OBJECTS
+- Id_no (PK)
+- Artist
+- Year
+- Title
+- Description
+- Type (FK to CATEGORIES)
+
+Table: PAINTING
+- Id_no (FK to ART_OBJECTS)
+- Paint_type
+- Drawn_on
+- Style
+
+Table: SCULPTURE_STATUE
+- Id_no (FK to ART_OBJECTS)
+- Material
+- Height
+- Weight
+- Style
+
+Table: OTHER
+- Id_no (FK to ART_OBJECTS)
+- Type
+- Style
+
+Table: CATEGORIES
+- Category_Id (PK)
+- Category_Name (e.g., PAINTING, SCULPTURE, STATUE, OTHER)
+
+Table: PERMANENT_COLLECTION
+- Id_no (FK to ART_OBJECTS)
+- Date_acquired
+- Status (on_display, on_loan, stored)
+- Cost
+
+Table: BORROWED
+- Id_no (FK to ART_OBJECTS)
+- Borrowed_from
+- Borrowed_date
+- Expected_return_date
+- Return_date
